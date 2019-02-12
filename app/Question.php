@@ -16,6 +16,13 @@ class Question extends Model
 	// has One to Many | hasMany().
 
     public function user() {
-    	return $this->belongsTo('App/User');
+    	return $this->belongsTo('App\User');
+    }
+
+    //Mutator 
+
+    public function setTitleAttribute($value) {
+    	$this->attributes['title'] = $value;
+    	$this->attributes['slug'] = str_slug($value);
     }
 }

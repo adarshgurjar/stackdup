@@ -32,6 +32,6 @@ class User extends Authenticatable
     // Its inverse will be defined in the Question model (belongsTo method for that).
 
     public function questions() {
-        return $this->hasMany('App/Question');
+        return $this->hasMany('App\Question');
     }
 }
