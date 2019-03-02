@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
         			factory(App\Question::class, rand(1, 5))->make() //make() saves in memory, while create stores in database
         		);
         });
-        factory(App\Question::class, 10)->create();
+        
     }
 }
